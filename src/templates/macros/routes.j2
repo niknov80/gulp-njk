@@ -1,0 +1,11 @@
+{%- macro url_for(route, filename=None, pagename=None) -%}
+  {%- if route == 'static' -%}
+    ./static/{{ filename }}
+  {%- elif route == 'page.one' -%}
+    ./{{ pagename }}.html
+  {%- endif -%}
+{%- endmacro -%}
+
+{% macro url_for_resize(file_name, retina, file_type) -%}
+./static/img/{{ file_name }}{%- if retina %}@2x{%- endif %}.{{ file_type }}
+{%- endmacro -%}

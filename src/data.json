@@ -1,0 +1,18 @@
+{
+  "debug": false,
+  "site_name": "Название сайта",
+  "menu": [
+    {
+      "title": "Главная",
+      "href": "index"
+    }, {
+      "title": "Контакты",
+      "href": "contacts"
+    }
+  ],
+  "media": {
+    "mobile": 320,
+    "tablet": 768,
+    "desktop": 1200
+  }
+}

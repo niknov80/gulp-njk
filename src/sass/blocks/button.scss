@@ -1,0 +1,6 @@
+@use "../mixins/media.scss" as *;
+@use "../mixins/btn.scss" as *;
+
+.button {
+  @include btn;
+}

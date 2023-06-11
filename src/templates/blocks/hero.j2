@@ -1,0 +1,21 @@
+{%- from "macros/picture.j2" import picture, picture_svg -%}
+<section class="hero">
+  <h1>Главная !!!</h1>
+  <p class="hero__description">Главная страница.</p>
+  {{ picture(
+      class_name='hero__img',
+      file_name='content/triple-set-mobil',
+      alt='Корзинки',
+      type='jpg',
+      width=260,
+      height=315,
+      bp_tablet=(media.tablet),
+      file_name_tablet='content/triple-set-tablet',
+      width_tablet=334,
+      height_tablet=404,
+      bp_desktop=(media.desktop),
+      file_name_desktop='content/triple-set-desktop',
+      width_desktop=525,
+      height_desktop=636
+    ) }}
+</section>

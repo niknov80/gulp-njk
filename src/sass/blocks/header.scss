@@ -1,0 +1,3 @@
+@use "../mixins/layout.scss" as *;
+
+.header__wrap { @include container; }

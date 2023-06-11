@@ -1,0 +1,8 @@
+{% from "./site-nav.j2" import "make_menu" %}
+  <header class="header">
+    <div class="header__wrap">
+      <nav class="nav">
+        {{- make_menu(menu, page) }}
+      </nav>
+    </div>
+  </header>

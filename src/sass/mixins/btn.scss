@@ -1,0 +1,19 @@
+@use "../mixins/media.scss" as *;
+
+@mixin btn {
+  box-sizing: border-box;
+  display: inline-flex;
+  font-family: var(--font-family);
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+
+  &:hover { text-decoration: none; }
+
+  &:disabled {
+    cursor: progress;
+  }
+}

@@ -1,0 +1,30 @@
+@use "sass:color";
+
+// Шрифты
+$font-family: inter, arial, sans-serif;
+$font-size: 16px;
+$line-height: 1.5;
+$letter-spacing: 0;
+
+// Цвета
+$color-text: #283136;
+$color-bold: #000;
+$color-bg: #fff;
+$color-primary: #fb565a;
+$color-secondary: #00ca74;
+$color-hover: color.adjust($color-primary, $lightness: -15%);
+$color-active: color.adjust($color-primary, $lightness: 15%);
+
+// Размеры
+$widths: (
+  sm: 320px,
+  md: 768px,
+  lg: 1200px,
+  xl: 1440px
+);
+
+// Отступы
+$gap: 140px;
+$gap-sm: 20px;
+$gap-md: 32px;
+$gap-lg: 40px;

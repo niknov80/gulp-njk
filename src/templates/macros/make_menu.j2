@@ -1,0 +1,9 @@
+{%- macro make_menu(menu_items, active_item) %}
+        <ul class="site-nav__list">
+          {%- for link in menu_items %}
+          <li class="site-nav__item">
+            <a{% if link.href == active_item %} class="active"{% endif %} href="{{ link.href }}.html">{{ link.title }}</a>
+          </li>
+          {%- endfor %}
+        </ul>
+{%- endmacro %}
