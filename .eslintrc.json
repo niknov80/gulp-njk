@@ -5,9 +5,13 @@
   },
   "env": {
     "es2017": true,
+    "node": true,
     "browser": true
   },
   "extends": "htmlacademy/vanilla",
+  "globals": {
+    "app": "writable"
+  },
   "rules": {
     // Additional rules...
   }

@@ -4,10 +4,12 @@
   "menu": [
     {
       "title": "Главная",
-      "href": "index"
+      "page": "index",
+      "href": "index.html"
     }, {
       "title": "Контакты",
-      "href": "contacts"
+      "page": "contacts",
+      "href": "contacts.html"
     }
   ],
   "media": {

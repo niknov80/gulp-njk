@@ -1,9 +1,9 @@
-//Получаем имя из папки проекта
+// Получаем имя из папки проекта
 import * as nodePath from 'path';
 const rootFolder = nodePath.basename(nodePath.resolve());
 
-const buildFolder = `./build`; //Путь к папке с результатом, можно поменять на rootFolder
-const srcFolder = `./src`; //Путь к исходным файлам
+const buildFolder = './build'; // Путь к папке с результатом, можно поменять на rootFolder
+const srcFolder = './src'; //  0 Путь к исходным файлам
 
 export const path = {
   build: {
@@ -13,7 +13,7 @@ export const path = {
     js: `${buildFolder}/static/js/`,
     img: `${buildFolder}/static/img/`,
     sprite: `${buildFolder}/static/img/`,
-    svg:`${buildFolder}/static/img/`,
+    svg: `${buildFolder}/static/img/`,
     fonts: `${buildFolder}/static/fonts/`,
     pp: `${buildFolder}/static/pp/`,
     vendor: `${buildFolder}/static/vendor/`
@@ -45,8 +45,7 @@ export const path = {
     svg: `${srcFolder}/static/img/{common,content}/**/*.svg`
   },
   clean: buildFolder, // папка для очистки
-  buildFolder: buildFolder, // папка для продакшена
-  srcFolder: srcFolder, // папка с исходниками
-  rootFolder: rootFolder, // корневая папка проекта
-  ftp: ``
-}
+  buildFolder, // папка для продакшена
+  srcFolder, // папка с исходниками
+  rootFolder // корневая папка проекта
+};

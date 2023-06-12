@@ -1,4 +1,4 @@
-export const server = (done) => {
+export const server = () => {
   app.plugins.browsersync.init({
     server: {
       baseDir: app.path.build.templates
@@ -7,4 +7,4 @@ export const server = (done) => {
     injectChanges: false,
     port: 3000,
   });
-}
+};

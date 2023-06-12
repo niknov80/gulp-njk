@@ -5,9 +5,9 @@ import rename from 'gulp-rename';
 import ifPlugin from 'gulp-if';
 
 export const plugins = {
-  plumber: plumber,
-  notify: notify,
-  browsersync: browsersync,
-  rename: rename,
+  plumber,
+  notify,
+  browsersync,
+  rename,
   if: ifPlugin
-}
+};

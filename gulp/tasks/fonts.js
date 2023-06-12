@@ -1,10 +1,10 @@
-import ttf2woff from "gulp-ttf2woff";
-import ttf2woff2 from "gulp-ttf2woff2";
+import ttf2woff from 'gulp-ttf2woff';
+import ttf2woff2 from 'gulp-ttf2woff2';
 export const ttfToWoff = () => app.gulp.src(app.path.src.ttf)
   .pipe(app.plugins.plumber(
     app.plugins.notify.onError({
-      title: "FONTS",
-      message: "Error: <%= error.message %>"
+      title: 'FONTS',
+      message: 'Error: <%= error.message %>'
     })
   ))
   .pipe(ttf2woff())
@@ -15,4 +15,3 @@ export const ttfToWoff = () => app.gulp.src(app.path.src.ttf)
 
 export const copyWoff = () => app.gulp.src(app.path.src.woff)
   .pipe(app.gulp.dest(app.path.build.fonts));
-

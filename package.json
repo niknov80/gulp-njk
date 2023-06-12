@@ -10,7 +10,7 @@
     "editorconfig": "editorconfig-cli",
     "lint:styles": "stylelint src/sass/**/*.scss --config .stylelintrc.json",
     "lint:templates": "djlint src/templates --lint --configuration .djlintrc",
-    "lint:js": "eslint src/static/js -c .eslintrc.json",
+    "lint:js": "eslint src/static/js/ gulp/ gulpfile.js -c .eslintrc.json",
     "lint": "npm run editorconfig && npm run lint:styles && npm run lint:templates && npm run lint:js"
   },
   "author": "Nikolay Novozhilov",

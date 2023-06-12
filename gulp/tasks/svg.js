@@ -8,7 +8,7 @@ const svgOptions = {
     active: true
   }, {
     name: 'removeXMLNS',
-    active : true
+    active: true
   }, {
     name: 'removeXMLProcInst',
     active: true
@@ -25,22 +25,22 @@ const svgOptions = {
     name: 'removeViewBox',
     active: false
   }]
-}
+};
 export const sprite = () => app.gulp.src(app.path.src.icons)
   .pipe(app.plugins.plumber(
     app.plugins.notify.onError({
-      title: "SPRITE",
-      message: "Error: <%= error.message %>"
+      title: 'SPRITE',
+      message: 'Error: <%= error.message %>'
     })
   ))
   .pipe(svgmin(svgOptions))
   .pipe(cheerio({
-    run: function ($) {
+    run: function ($) { // eslint-disable-line object-shorthand
       // $('[fill]').removeAttr('fill');
       // $('[stroke]').removeAttr('stroke');
       $('[style]').removeAttr('style');
     },
-    parserOptions: {xmlMode: true}
+    parserOptions: { xmlMode: true }
   }))
   .pipe(svgstore({
     inlineSvg: true
@@ -52,8 +52,8 @@ export const sprite = () => app.gulp.src(app.path.src.icons)
 export const svg = () => app.gulp.src(app.path.src.svg)
   .pipe(app.plugins.plumber(
     app.plugins.notify.onError({
-      title: "SVG",
-      message: "Error: <%= error.message %>"
+      title: 'SVG',
+      message: 'Error: <%= error.message %>'
     })
   ))
   .pipe(svgmin(svgOptions))

@@ -5,8 +5,8 @@ import sass from 'gulp-dart-sass';
 export const styles = () => app.gulp.src(app.path.src.sass, { sourcemaps: app.isDev })
   .pipe(app.plugins.plumber(
     app.plugins.notify.onError({
-      title: "SASS",
-      message: "Error: <%= error.message %>"
+      title: 'SASS',
+      message: 'Error: <%= error.message %>'
     })
   ))
   .pipe(sass.sync().on('error', sass.logError))
@@ -15,7 +15,7 @@ export const styles = () => app.gulp.src(app.path.src.sass, { sourcemaps: app.is
     csso()
   ]))
   .pipe(app.plugins.rename({
-    suffix: `.min`
+    suffix: '.min'
   }))
   .pipe(app.gulp.dest(app.path.build.css, { sourcemaps: '.' }))
   .pipe(app.plugins.browsersync.stream());
